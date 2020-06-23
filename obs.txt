@@ -1,0 +1,35 @@
+yarn init -y
+
+yarn add express
+
+yarn add typescript -D
+
+yarn tsc --init
+
+converter para arquivo
+yarn tsc 
+
+
+problema declaracao de tipo
+yarn add @types/express -D
+
+nao usar pasta dist
+yarn add ts-node-dev -D
+
+eslint
+yarn add eslint@6.8.0 -D
+
+
+configurar arquivo eslint
+yarn eslint --init
+
+configurar eslint
+ 
+yarn add @typescript-eslint/eslint-plugin@latest eslint-config-airbnb-base@latest eslint-plugin-import@^2.21.2 @typescript-eslint/parser@latest -D
+
+resolver os importes do typescript
+yarn add eslint-import-resolver-typescript -D
+
+instalar pretter
+yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+ 
