@@ -32,4 +32,15 @@ yarn add eslint-import-resolver-typescript -D
 
 instalar pretter
 yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+
+
+--------------------------- post configuracao
+
+bibliotecas uid
+
+yarn add uuidv4
+
+biblioteca de data e horarios
+
+yarn add date-fns
  
