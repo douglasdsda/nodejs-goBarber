@@ -43,4 +43,24 @@ yarn add uuidv4
 biblioteca de data e horarios
 
 yarn add date-fns
+
+---------------------------------------- BANCO
+
+yarn add typeorm pg
+
+criar uma migration
+
+yarn typeorm migration:create -n CreateAppointments
+
+executar migrations
+
+yarn typeorm migration:run
+
+desfazer migration que nao foi commitada
+
+yarn typeorm migration:revert
+
+sintaxa decorate
+
+yarn add reflect-metadata
  
