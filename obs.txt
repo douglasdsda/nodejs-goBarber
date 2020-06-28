@@ -63,4 +63,26 @@ yarn typeorm migration:revert
 sintaxa decorate
 
 yarn add reflect-metadata
+
+-------- banco usuario
+
+yarn typeorm migration:create -n CreateUsers
+
+--- alterar migration
+yarn typeorm migration:create -n AlterProviderFieldToProviderId
+
+------------- autenticacao
+senha bcy
+yarn add bcryptjs
+
+yarn add -D @types/bcryptjs
+
+token
+yarn add jsonwebtoken
+yarn add -D @types/jsonwebtoken
+
+md5 online
+
+ver token
+jwt io
  
