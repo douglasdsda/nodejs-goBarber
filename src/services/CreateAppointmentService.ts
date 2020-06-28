@@ -1,8 +1,11 @@
 import { startOfHour } from 'date-fns';
-import { getCustomRepository } from 'typeorm';
+import { getCustomRepository, getRepository } from 'typeorm';
+
+import AppError from '../errors/AppErros';
 
 import Appointment from '../models/Appointment';
 import AppointmentsRepository from '../repositories/AppointmentsRepository';
+import User from '../models/User';
 // recebimento, tratamento de erro e acesso ao repositorio
 
 interface Request {
@@ -22,7 +25,17 @@ class CreateAppointmentService {
         );
 
         if (findAppointmentInSameDate) {
-            throw Error('This appointment is already booked');
+            throw new AppError('This appointment is already booked');
+        }
+
+        const usersRepository = getRepository(User);
+
+        const user = await usersRepository.findOne({
+            where: { id: provider_id },
+        });
+
+        if (!user) {
+            throw new AppError('User not existis');
         }
 
         const appointment = appointmentsRepository.create({

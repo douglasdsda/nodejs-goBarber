@@ -94,4 +94,7 @@ upload imagem express
 yarn add multer
 
 yarn add -D @types/multer
+
+problema async para pegar os erros 
+yarn add express-async-errors
  
