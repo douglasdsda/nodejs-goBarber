@@ -98,3 +98,12 @@ yarn add -D @types/multer
 problema async para pegar os erros 
 yarn add express-async-errors
  
+
+ ---------------- f04 
+
+configuracao do banco
+ ./database
+
+ lib para configurar caminhos de @
+  yarn add tsconfig-paths -D
+
