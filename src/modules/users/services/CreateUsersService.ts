@@ -3,6 +3,7 @@ import { hash } from 'bcryptjs';
 import AppError from '@shared/errors/AppErros';
 
 import User from '@modules/users/infra/typeorm/entities/User';
+import { injectable, inject } from 'tsyringe';
 import IUsersRepository from '../repositories/IUsersRepository';
 
 interface IRequest {
@@ -11,10 +12,18 @@ interface IRequest {
     password: string;
 }
 
+@injectable()
 class CreateUserService {
-    constructor(private usersRepository: IUsersRepository) {}
+    constructor(
+        @inject('UsersRepository')
+        private usersRepository: IUsersRepository,
+    ) {}
 
     public async execute({ name, email, password }: IRequest): Promise<User> {
+        if (!name) {
+            throw new AppError('Name is Empty.');
+        }
+
         const checkUsersExists = await this.usersRepository.findByEmail(email);
 
         if (checkUsersExists) {
