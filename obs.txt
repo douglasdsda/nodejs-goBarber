@@ -107,3 +107,21 @@ configuracao do banco
  lib para configurar caminhos de @
   yarn add tsconfig-paths -D
 
+
+  -------- 
+
+lib injeção de dependencias
+
+yarn add tsyringe
+
+
+os controllers tem que ter 1 tipos 
+index, show, create, update e delete
+
+
+yarn add jest -D
+yarn jest --init
+
+yarn add ts-jest -D
+
+yarn add @types/jest -D
