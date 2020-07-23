@@ -22,10 +22,6 @@ class CreateUserService {
     ) {}
 
     public async execute({ name, email, password }: IRequest): Promise<User> {
-        if (!name) {
-            throw new AppError('Name is Empty.');
-        }
-
         const checkUsersExists = await this.usersRepository.findByEmail(email);
 
         if (checkUsersExists) {
