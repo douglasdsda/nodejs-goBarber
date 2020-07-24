@@ -125,3 +125,17 @@ yarn jest --init
 yarn add ts-jest -D
 
 yarn add @types/jest -D
+]
+
+--- migration user tokens
+
+yarn typeorm migration -n CreateUserTokens
+yarn typeorm migration:create -n CreateUserTokens
+
+
+--- email provider 
+ethereal mail 
+
+
+yarn add nodemailer
+yarn add @types/nodemailer -D
