@@ -149,3 +149,12 @@ yarn add handlebars
 
 
 brasil utc -3
+
+
+mockImplementationOnce
+ele executa um vez somente
+
+
+criacao de uma nova migration
+yarn typeorm migration:create -n AddUserIdToAppointments
+yarn typeorm migration:run
