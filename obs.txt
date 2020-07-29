@@ -158,3 +158,28 @@ ele executa um vez somente
 criacao de uma nova migration
 yarn typeorm migration:create -n AddUserIdToAppointments
 yarn typeorm migration:run
+
+
+
+----------------------------------------------------- terceira parte --------
+
+criar docker
+docker run --name mongodb -p 27017:27017 -d -t mongo
+
+instalar mongo
+yarn add mongodb
+yarn add @types/mongodb -D
+
+
+validacao de campos
+yarn add celebrate
+
+yarn add -D @types/hapi__joi
+
+yarn add cors
+npm install @types/cors
+
+variavel env
+yarn add dotenv
+
+yarn add class-transformer

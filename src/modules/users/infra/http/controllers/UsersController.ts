@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import CreateUsersService from '@modules/users/services/CreateUsersService';
 import { container } from 'tsyringe';
 import UpdateUserAvatarService from '@modules/users/services/UpdateUserAvatarService';
+import { classToClass } from 'class-transformer';
 
 export default class UsersController {
     public async create(
@@ -18,9 +19,7 @@ export default class UsersController {
             password,
         });
 
-        delete user.password;
-
-        return response.json(user);
+        return response.json(classToClass(user));
     }
 
     public async patch(
@@ -36,8 +35,6 @@ export default class UsersController {
             avatarFilename: request.file.filename,
         });
 
-        delete user.password;
-
-        return response.json(user);
+        return response.json(classToClass(user));
     }
 }

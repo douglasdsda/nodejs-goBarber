@@ -33,8 +33,6 @@ class AuthenticateUserService {
             throw new AppError('Incorrect email/password combination.', 401);
         }
 
-        // senha criptografada
-
         const passwordMatched = await this.hashProvider.compareHash(
             password,
             user.password,
