@@ -183,3 +183,18 @@ variavel env
 yarn add dotenv
 
 yarn add class-transformer
+
+
+docker run --name redis -p 6379:6379 -d -t redis:alpine
+
+
+iniciar docker
+
+docker start mongodb
+docker start postgres_db_1
+docker redis
+
+yarn add ioredis
+yarn add install @types/ioredis
+
+datadog monitorar banco
