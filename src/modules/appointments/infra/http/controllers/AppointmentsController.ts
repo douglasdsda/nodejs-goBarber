@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 // import { parseISO } from 'date-fns';
 import { container } from 'tsyringe';
 import CreateAppointmentService from '@modules/appointments/services/CreateAppointmentService';
+import { classToClass } from 'class-transformer';
 
 export default class AppointmentsController {
     public async create(
@@ -11,7 +12,7 @@ export default class AppointmentsController {
         const user_id = request.user.id;
         const { provider_id, date } = request.body;
 
-        // const parsedDate = parseISO(date);
+        // const parsedDate = parseISO(date); //convert in date
 
         const createAppointment = container.resolve(CreateAppointmentService);
 
@@ -20,6 +21,6 @@ export default class AppointmentsController {
             user_id,
             provider_id,
         });
-        return response.json(appointment);
+        return response.json(classToClass(appointment));
     }
 }

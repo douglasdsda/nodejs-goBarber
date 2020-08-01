@@ -206,3 +206,21 @@ yarn add rate-limiter-flexible
 
 yarn add redis
 yarn add @types/redis
+
+docker start mongodb
+docker start postgres_db_1
+docker redis
+
+yarn add ioredis
+yarn add install @types/ioredis
+
+datadog monitorar banco
+
+
+Bruce force
+
+yarn add rate-limiter-flexible
+
+yarn add redis
+yarn add @types/redis
+
