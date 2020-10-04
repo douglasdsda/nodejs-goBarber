@@ -225,4 +225,4 @@ yarn add redis
 yarn add @types/redis
 
 
-docker run --name postgres -e POSTGRES_PASSWORD=root -d -v ./:/var/lib/postgresql/data  postgres
+docker run --name postgres -e POSTGRES_PASSWORD=root -d  postgres
